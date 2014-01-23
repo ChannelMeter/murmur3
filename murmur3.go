@@ -18,6 +18,7 @@ type HashM3 interface {
 	hash.Hash
 	//ResetAndSetSeed resets the hash and sets the seed.
 	ResetAndSetSeed(seed uint32)
+	Clone() HashM3
 }
 
 // Hash32 interface for 32-bit hash functions.

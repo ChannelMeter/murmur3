@@ -24,6 +24,12 @@ type sum64_128 struct {
 	offset uint8
 }
 
+func (s *sum64_128) Clone() HashM3 {
+	r = new(sum64_128)
+	*r = *s
+	return r
+}
+
 // New64 returns a Murmur3 128-bit hash.Hash optimized for 64-bit architecture.
 func New64(seed uint32) Hash128 {
 	seed64 := uint64(seed)

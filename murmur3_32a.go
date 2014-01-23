@@ -27,6 +27,12 @@ func New32a(seed uint32) Hash32 {
 	return &sum32_32{seed, 0, 0, 0}
 }
 
+func (s *sum32_32) Clone() HashM3 {
+	r = new(sum32_32)
+	*r = *s
+	return r
+}
+
 // Reset resets the hash to one with zero bytes written.
 func (s *sum32_32) Reset() {
 	s.h1, s.k1, s.length, s.offset = 0, 0, 0, 0
