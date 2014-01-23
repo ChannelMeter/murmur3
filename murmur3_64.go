@@ -25,7 +25,7 @@ type sum64_128 struct {
 }
 
 func (s *sum64_128) Clone() HashM3 {
-	r = new(sum64_128)
+	r := new(sum64_128)
 	*r = *s
 	return r
 }

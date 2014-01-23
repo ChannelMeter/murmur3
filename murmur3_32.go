@@ -36,7 +36,7 @@ func New32(seed uint32) Hash128 {
 }
 
 func (s *sum32_128) Clone() HashM3 {
-	r = new(sum32_128)
+	r := new(sum32_128)
 	*r = *s
 	return r
 }
